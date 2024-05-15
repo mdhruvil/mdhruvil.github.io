@@ -1,0 +1,45 @@
+---
+import { links } from "../data";
+import { Icon } from "astro-icon/components";
+---
+
+<section id="me" class="mb-32">
+  <h1 class="text-3xl" title="Dhruvil Moradiya">I'm @mdhruvil</h1>
+  <p class="mb-4 text-rose-100/50">
+    Software Developer Intern
+    <a
+      href="https://allevents.in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:underline hover:underline-offset-4">@AllEvents</a
+    >
+  </p>
+  <p
+    class="mb-6 leading-relaxed text-rose-100/70 md:max-w-[75%] lg:max-w-[60%]"
+  >
+    <span class="font-serif italic">Lorem</span>, ipsum dolor sit amet
+    consectetur adipisicing elit. Iste quo numquam dignissimos aliquam, itaque
+    provident labore! Modi, ipsam sapiente? Ipsa
+    <span class="font-serif italic">Ullam</span> et ut qui placeat commodi reiciendis
+    sint porro facilis. <span class="font-serif italic">adipisicing</span> ipsum
+    dolor sit amet consectetur adipisicing elit. Ullam hic adipisci <span
+      class="font-serif italic">perferendis</span
+    > placeat itaque voluptatem alias eveniet vitae non, debitis <span
+      class="font-serif italic">alias</span
+    > dolores obcaecati. Eligendi perferendis voluptate, autem doloremque obcaecati
+    dolores.
+  </p>
+  <ul class="flex gap-2">
+    {
+      links.map((link) => {
+        return (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+                <Icon name={link.icon} class="size-6 text-rose-100/70" title={link.name} />
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
